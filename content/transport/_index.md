@@ -1,6 +1,7 @@
 +++
 title = "The Transport"
 type = "chapter"
+weight='3'
 +++
 
 The *Transport* is a new feature in build 30.   It is responsible for the generation of MIDI clocks that can be used to synchronize with external hardware devices or other applications, and is the primary mechanism for recording multiple tracks that play in synchronization with each other without drifting apart.

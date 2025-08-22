@@ -1,5 +1,6 @@
 +++
 title = 'Upgrading from 2.5'
+weight='6'
 +++
 
 There is a utility that can help upgrade old Mobius 2.5 configuration files.  It should copy all Preset and Track Setups, and most MIDI, keyboard, and host parameter bindings.

@@ -4,4 +4,5 @@ languageCode = 'en-us'
 title = 'Mobius 3'
 [params]
 collapsibleMenu = true
-themeVariant='neon'
+#themeVariant='neon'
+

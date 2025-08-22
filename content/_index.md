@@ -3,4 +3,7 @@ title = ""
 type = "home"
 +++
 
-This is your new home page.  It was modified.
+Welcome to Mobius 3!  This is the new documentation site.
+
+It will get better than this I promise.
+

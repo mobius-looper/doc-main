@@ -1,6 +1,7 @@
 +++
 title = "Sessions"
 type = "chapter"
+weight='1'
 +++
 
 A **Session** is a collection of configuration settings that is saved on the file system.  When you start Mobius, a session is loaded into memory and when you shutdown Mobius the current contents of the session may be saved.  You can save any number of sessions but when you use Mobius, you are always using one *active* session.
