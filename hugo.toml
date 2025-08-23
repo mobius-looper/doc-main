@@ -16,3 +16,8 @@ collapsibleMenu = true
     name = 'Github Repository'
     url = 'https://github.com/mobius-looper/doc-main'
     weight = 2
+    
+  [[menu.shortcuts]]
+    name = 'Old Documentation'
+    url = 'https://mobiuslooper.com/documentation'
+    weight = 3
