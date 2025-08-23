@@ -6,3 +6,13 @@ title = 'Mobius 3'
 collapsibleMenu = true
 #themeVariant='neon'
 
+[menu]
+  [[menu.shortcuts]]
+    name = 'User Forum'
+    url = 'https://mobiuslooper.com/forum/public'
+    weight = 1
+
+  [[menu.shortcuts]]
+    name = 'Github Repository'
+    url = 'https://github.com/mobius-looper/doc-main'
+    weight = 2
