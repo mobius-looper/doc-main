@@ -7,17 +7,28 @@ collapsibleMenu = true
 #themeVariant='neon'
 
 [menu]
+
+  [[menu.shortcuts]]
+    name = 'Scripting'
+    url = 'https://mobius-looper.github.io/doc-script'
+    weight = 1
+    
+  [[menu.shortcuts]]
+    name = 'Cookbook'
+    url = 'https://mobius-looper.github.io/doc-cookbook'
+    weight = 2
+
+  [[menu.shortcuts]]
+    name = 'Reference'
+    url = 'https://mobius-looper.github.io/doc-reference'
+    weight = 3
+
   [[menu.shortcuts]]
     name = 'User Forum'
     url = 'https://mobiuslooper.com/forum/public'
-    weight = 1
-
-  [[menu.shortcuts]]
-    name = 'Github Repository'
-    url = 'https://github.com/mobius-looper/doc-main'
-    weight = 2
+    weight = 4
     
   [[menu.shortcuts]]
-    name = 'Old Documentation'
-    url = 'https://mobiuslooper.com/documentation'
-    weight = 3
+    name = 'Github Repository'
+    url = 'https://github.com/mobius-looper/doc-script'
+    weight = 5
