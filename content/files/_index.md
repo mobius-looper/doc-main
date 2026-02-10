@@ -1,7 +1,7 @@
 +++
 title = "Files"
 type = "chapter"
-weight='1'
+weight='2'
 +++
 
 Mobius uses the computer's file system to store many things.  Internal files that
