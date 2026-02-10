@@ -17,7 +17,6 @@ Until you find a use for this, you can continue thinking of the *Default Leader*
 To visualize these concepts I strongly recommend you include the Leader/Master indiciator
 in the track strip.   The words *Leader* and *Master* will appear and disappear as the track accepts or loses those states.  From *Display->Manage Layouts->Docked Track Strip* drag the word *masters* from the right side to the left.  What you see in the left panel are the names of the elements that will be dispayed in the track strips along the bottom of the Mobius window.  You can also click-drag items in this list to change their order.
 
-
 ### Manual Selection
 
 The function names used to select the leader or master have changed.  I tried to make the upgrade process smarter about fixing existing bindings to have the new names, but be on the lookout for this.  If you had a MIDI binding to *Track Sync Master* that suddenly doesn't seem to work, the upgrade may not have found the binding.  You will need to edit the binding, use the *Change Action* button and select the new name.
@@ -32,7 +31,7 @@ SyncMasterTransport       TransportMaster
 
 ```
 
-### Automatic Selection
+### Leader Elections
 
 Previously the *Track Sync Master* was selected automatically as tracks were recorded.  This could be controlled with the parameter displayed as "Track Master Select" which had values *Manual*, *Accept*, *Preferred*, and *Never*.
 
@@ -60,15 +59,19 @@ A track may choose to *accept* the election, or it may *never* want it, or it ma
 
 Some tracks are apathetic and will only accept the election if you *manually* force it to.
 
-There are various reasons why a leader election may be held.  
+There are various reasons why a leader election may be held.  An election is always held when a new loop is recorded.  If there is already a leader at that time, it has priority and will remain the leader.  If there is no leader all tracks are examined from left to right.  Any tracks that are *Preferred* are chosen first, followed by any tracks that simply *Accept*.    If there is more than one track of the same level (Preferred vs. Accept) then the one with the lowest number is chosen.
 
+But there are other reasons where it may make sense to hold a new election.  The most common is when the current leader is *Reset*.  Since this track can no longer provide any synchronization servies to other tracks, an election may be held.  But you may want to allow the track to retain it's leadership status after a Reset.  Perhaps the loop is just being cleared in preparation for a new recording, and once that recording finishes you want this track to continue being the leader.  This can be controlled with the *Leader Election After Reset* checkbox.  When this is off, no election is held when the leader is reset and the leader stays where it is.  If this is on, a different track may be automatically chosen as the new leader.
 
+Other election triggers are likely to be added in the future.  Anything that causes a track to suddenly have a new loop or lose an existing loop could potentially trigger an election.  This includes:
 
+  * Switching from a full loop to an empty loop
+  * Switching from an empty loop to a full loop
+  * Loading or dropping a file
+  * Using a *loop copy* function
 
-
-
-
-
+As mentioned, the election process applies to both selecting a *default leader* as well as the *transport master*.
+The difference is that in a newly created Session, tracks will have *Leader Acceptance* set to *Accept* but they have *Master Acceptance* set to *Manual*.  You alomst always want to start with automatic leader selection, but since master selection is more consequential, it starts out being manual.
 
 ### Leader/Master in Scripts
 

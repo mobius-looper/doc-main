@@ -1,0 +1,11 @@
+What you currently see as Mobius is something that evolved erratically.  In the beginning, it took inspiration from certain things, notably the EDP and and some of the concepts found in DAWs.  On top of that it accumulated ideas from a number of people with very different ways of thinking about "looping".  That's part of the reason why we have scripts.  If you ask 10 different people what they want to accomplish when they push 4 footswitch buttons in front of an audience, you will get 10 different answers (though one of them will always be "Sheeran").
+
+Mobius 2, which is 20 years old at this point, was what I consider a prototype.  It didn't really have any guiding vision other than trying to understand why people liked the EDP, and slamming in as many feature requests as I could when I had the time.   From the outside it did what some people wanted, but configuring it required STEM training, and the internal architecdture was an absolute mess.  And for the UI, the less said the better.
+
+Then came the *dark time* when it was shelved for *reasons*, and the world moved on.  During that time "looping" grew in popularity thanks to low-cost hardware pedals, and newer, shinier software.  What people think looping is today is not the same as it was when this started.  Or maybe it is but I just wasn't listening to those people.  Nobody really cares about the EDP any more it seems.  They mostly want to layer backgrounds to solo over, or trigger samples while they bob their head over 20 boxes on a table.  It's not better or worse, it's just different.
+
+When I resurected this project two years ago, I wanted to have a clearer vision in mind.  I have the time to do things differently now.  It may surprise people to learn that I'm not particularly interested in emulating the EDP.  I chose it because it was complex and I wanted an architecture that could the support the things it could do.  But I have other goals for things I would use myself for live composition.
+
+
+
+
