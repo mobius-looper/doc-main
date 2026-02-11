@@ -47,7 +47,7 @@ we can make an educated guess about what that means.  It looks like 2 4/4 bars a
 but you can adjust it by adding or removing bars until the tempo feels right.  This is what you must do
 if you want Mobius to generate MIDI clocks at a tempo.  And once you do that it means all loops
 have beats and bars.  You may choose to use subcycles and cycles if want, but loops
-will always have beats and bars at a tempo, and often those can be computed automatically.
+will always have beats and bars at a tempo, that are computed automatically.
 
 #### Points
 
@@ -57,11 +57,11 @@ a bar technically has two points, the start point and the end point.  For most u
 difference.  The end point of one bar is the start point of the bar after it, so you only ever care about bar start points.  The one exception is the unit *loop*.  In a few cases it is important to distinguish between the *start* of the loop and the *end* of the loop.   So when talking about loops the points *start* and *end* are meaningful.
 
 The *subcycle* is arguably more of a point than a unit.  Cycles and loops have a relatively obvious length.
-Subcycles are just point in a cycle and you can chaange them any time after recording, unlike beats and bars which are fixed.  
+Subcycles are just a point in a cycle and you can change them any time after recording, unlike beats and bars which are fixed.  
 
 But points do not have to correspond to recording units.  They can just be random locations in a loop that you might find interesting, and choose to give it a name.  I have started using the term *Marker* for user defined points.  In future builds you will be able to drop markers anywhere within a loop.  These markers can be given names like "verse" and "chorus".
 
-So while there are a small number of units that have well defined lengths and are used to create recording.  There can be many points within that recording that provide a structure to the recording.    The distance between two points is not necessariy a unit, they are just two independent moments in time. 
+So while there are a small number of units that have well defined lengths and are used to create recordings.  There can be many points within that recording that provide a structure to the recording.    The distance between two points is not necessariy a unit, they are just two independent moments in time. 
 
 #### Sources
 
@@ -71,7 +71,7 @@ When you choose a quantization point for a Mobius action, you have so far only b
 
 So when selecting points for quantization, you should be able to select anything that has a point with that name.   It does not matter if that point is inside the loop or outside.
 
-I think about quantization points in a way that a modular synth module would think about CV pulses.  The module needs to do something at a certain moment im time, and it waits until it receives a pulse to do that.  Where that pulse came from doesn't matter, you can patch in any source of pulses.
+You can also think about quantization points in a way that a modular synth module would think about CV pulses.  The module needs to do something at a certain moment im time, and it waits until it receives a pulse to do that.  Where that pulse came from doesn't matter, you can patch in any source of pulses.
 
 #### The Future
 
