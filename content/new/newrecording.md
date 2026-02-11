@@ -126,9 +126,9 @@ Finally we get to what is probably the most significant enhancement in this rele
 
 When you want to record some number of host bars, but want to start in the middle of a bar, Mobius will inject empty space or "padding" at the start of the loop so that what you end up with will stay in alignment with the host.  It's as if you had pressed Record exactly on the downbeat of the bar you're in but decided not to play anything until the middle of the bar.  It's going back in time to make the recording start when it should have, not where you were when you pressed Record.
 
-This BTW is something the RC-505 does as well.  You can be pretty sloppy about when you press Record.  If you're late it won't force you to wait all the way to the end of the loop, it starts immediately and injects empty space at the front to make up for the lost time.
+This by the way, is something the RC-505 does as well.  You can be pretty sloppy about when you press Record.  If you're late it won't force you to wait all the way to the end of the loop, it starts immediately and injects empty space at the front to make up for the lost time.
 
-For EDP users, this is more like TimeCopy followed by Multiply than a Record.  An empty loop is instantly created that is the right size, and Overdub/Multiply immediately starts inside that.  
+For EDP users, this is more like TimeCopy followed by Insert than a Record.  An empty loop is instantly created that is the right size, you start recording within that space.
 
 You might be wondering, if we can go back in time and pretend Record was pressed exactly when the bar started, can we put whatever I was playing at the time in the loop rather than just empty space?  This is something I've seen referred to as "retroactive recording" in other places.  The answer is no, not yet, but it's comming soon.
 
