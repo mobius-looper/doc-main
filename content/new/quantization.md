@@ -35,23 +35,27 @@ In build 46, the available quantization points are now:
 * LeaderLoop
 * LeaderMarker
 
-
 I'm not going to talk much about what *Marker* means yet, that's a future feature.  But you will start seeing that name in places.
 
-What is not included here, is something I alluded to if you read the previous section on the [Philosophy of Time](timephilosophy.md).  All loops now have beats and bars.  You can ignore them if you want, but I think many are going to find those to be far more predictable quantization points than subcycles.  So this list will probably involve the ability to include *Beats* and *Bars* within loops as well as the sync source.
+What is not included here, is something I alluded to if you read the previous section on the [Changes in Time](timephilosophy.md).  All loops now have beats and bars.  You can ignore them if you want, but I think many are going to find those to be far more predictable quantization points than subcycles.  So this list will probably involve the ability to include *Beats* and *Bars* within loops as well as the sync source.
 
-What I'm not happy with at the moment is the obvious duplication of these points for different point sources, in a single list.  That's nice in some respects, you just have one UI component to deal with when selecting a quantization point.  But really, you're doing two things: Selectiong a quantization point, and selecting a *point source*.
+#### Quantize Fallbacks
 
-The fundamental quantization points are:
+As mentioned in the section on recording, whenever there is a parameter whose options include the word *Leader*, there will be another parameter with the name *Fallback* that is used when there is no leader.  For example, a track may usually want to quantize to *Leader Cycle* when when there is no leader, it will use the local *Cycle* point.
 
-* Beat
-* Bar
-* Subcycle
-* Cycle
-* Loop
-* Marker
+The quantization parameters and their fallbacks are:
 
-And where you get those is from one of three places: *Local*, *Transport*, or *Leader*.
+```plaintext
 
-So I may adjust how this is presented in the UI and used in scripts, but the basic behavior
-remains, you can pick quantization points that are defined outside the loop.
+  Quantize
+  Quantize Fallback
+
+  Switch Quantize
+  Switch Quantize Fallback
+
+  Realign Quantize
+  Realign Quantize Fallback
+```
+
+
+  

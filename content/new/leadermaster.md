@@ -1,6 +1,6 @@
 +++
 title = 'Master and Leader'
-weight='1'
+weight='2'
 +++
 
 The concepts of a *Master* track and a *Leader* track are not new, but the terms used when talking about them and how they behave is different.

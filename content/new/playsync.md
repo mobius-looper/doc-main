@@ -1,19 +1,19 @@
 +++
-title = 'MIDI Tracks and PlaySync'
+title = 'MIDI Tracks and Play Sync'
 weight='5'
 +++
 
-**PlaySync** is a concept that applies only to MIDI tracks at this time, though some aspects of it may apply to audio tracks in the future.  It replaces the earlier *follower* options.
+**Play Sync** is a concept that applies only to MIDI tracks at this time, though some aspects of it may apply to audio tracks in the future.  It replaces the earlier *follower* options.
 
 We usually think of *synchronization* during recording.  Making a loop that synchronizes with the host, or another track.  And once recording is over, synchonization ends, and the loop plays.
 
-PlaySync is a form of synchronization that happens *after* loops are recorded.  It allows MIDI tracks to automatically respond when other tracks are recorded, or stop and start.
+Play Sync is a form of synchronization that happens *after* loops are recorded.  It allows MIDI tracks to automatically respond when other tracks are recorded, or stop and start.
 
 It is most useful for pre-recorded MIDI loops used as background material, such as a drum pattern or bass line.
 
-To use PlaySync, you first decide what this track is following.  It may either be the Transport or the Leader Track.  When this sync source starts and stops, the MIDI track will also start and stop.  More importantly, when the MIDI track starts it will *resize itself* so that its tempo matches the source tempo.  
+To use Play Sync, you first decide what the MIDI track is following.  It may either be the Transport or the Leader Track.  When this sync source starts and stops, the MIDI track will also start and stop.  More importantly, when the MIDI track starts it will *resize itself* so that its tempo matches the source tempo.  
 
-To configure PlaySinc, in the Session editor, select the midi track, and the *Follow* category.
+To configure Play Sync, in the Session editor, select the midi track, and the *Follow* category.
  
 #### Play Sync Source
 
@@ -48,11 +48,11 @@ When checked the track will *Mute* and *Unmute* at the same time as the sync sou
 
 #### Examples
 
-One handy way to use PlaySync is to audition MIDI loops.  Load a few MIDI files into track loops and have that track configured for PlaySync with the Transport.  Now, whenever you start or stop thetransport the MIDI track will play its loop.  Whenever you change the transport tempo, the MIDI track will also adjust to follow the new tempo.
+One handy way to use Play Sync is to audition MIDI loops.  Load a few MIDI files into track loops and have that track configured for Play Sync with the Transport.  Now, whenever you start or stop thetransport the MIDI track will play its loop.  Whenever you change the transport tempo, the MIDI track will also adjust to follow the new tempo.
 
 You might use this to start a MIDI background pattern and adjust its tempo until it feels right.  Then make this track the *default leader* and record other tracks to play along with it.
 
-The other common way to use PlaySync is for an automatic background patern that starts immediately after a track is recorded.  When you begin recording the MIDI follower is stopped and waits for recording to finish.  When recording finishes the track starts playing immediately in sync with the leader track, and using the same tempo.
+The other common way to use Play Sync is for an automatic background patern that starts immediately after a track is recorded.  When you begin recording the MIDI follower is stopped and waits for recording to finish.  When recording finishes the track starts playing immediately in sync with the leader track, and using the same tempo.
 
 
 

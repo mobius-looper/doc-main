@@ -1,5 +1,5 @@
 +++
-title = 'A Philosophy of Time'
+title = 'Changes in Time'
 weight='1'
 +++
 
@@ -71,7 +71,7 @@ When you choose a quantization point for a Mobius action, you have so far only b
 
 So when selecting points for quantization, you should be able to select anything that has a point with that name.   It does not matter if that point is inside the loop or outside.
 
-You can also think about quantization points in a way that a modular synth module would think about CV pulses.  The module needs to do something at a certain moment im time, and it waits until it receives a pulse to do that.  Where that pulse came from doesn't matter, you can patch in any source of pulses.
+You can also think about quantization points in a way that a modular synth module would think about CV pulses.  The module needs to do something at a certain moment in time, and it waits until it receives a pulse to do that.  Where that pulse came from doesn't matter, you can patch in any source of pulses.
 
 #### The Future
 

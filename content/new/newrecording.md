@@ -1,12 +1,11 @@
 +++
 title = 'The Recording Process'
-weight='2'
+weight='3'
 +++
 
 The way you go about creating a synchronized recording has changed significantly.   You can accomplish the same things as you did before, but the parameters you set to do that will be different.
 
-This is the first phase of a multi-phase project that will bring the *Transport* into a much more prominent role as the hub of synchronization services.  What is described in this document will evolve a little more in the near
-future, but most of what is presented will remain the same.
+This is the first phase of a multi-phase project that will bring the *Transport* into a much more prominent role as the hub of synchronization services.
 
 In previous releases, the first step in configuring the recording process was to choose a *Sync Source* for each track.  The possible values for this parameter were:
 
@@ -73,6 +72,18 @@ This is the same as what hapened when you set *Sync Source* to *Track* and used 
 There is no equivalent to *Master* here.  Any track may become the master track, it does not matter
 how it was recorded.
 
+#### External Sync Source
+
+This is a new temporary parameter that partially take the place of the older parameter *Sync Source*.  When you choose a value for any parameter such as *Record Unit* or *Record Start* that has *Sync* in the name.  That means you are choosing a point or unit defined by the *Transport* rather than a leader track.
+
+Eventually the way you configure synchronization with the Host or MIDI clocks will be done as part of the Transport configuration as it is done in just about every DAW.  You don't sync with MIDI directly, you ask the Transport to be a *slave* to a MIDI clock.  Tracks continue to listen to the Transport, but the Transport gets it's tempo from MIDI.
+
+It's the same with Host Sync.  When you make the Transport be a slave to the Host transport, it gets its tempo and time signature from the host.  Tracks continue listening to the transport, but they are now indirectly being synchronized by the host.
+
+This will be part of the next phase in build 47 or after.
+
+Until that time, it is still necessary for tracks to explicitly ask to synchronize with the Host or MIDI clocks using the *External Sync Source* parameter.  When this is set to *None* it means you are syncing with the Transport, when it is set to *Host* it means you are syncing with the host.
+
 #### Record Start
 
 The second most important recording parameter is *Record Start*.  This defines when you want
@@ -88,7 +99,7 @@ recording to begin.  The possible values are:
 * Leader Cycle
 * Leader Loop
 
-In prior releases, when a recording started and how long it lasted had to be the same thing, either a *Sync Unit* or a *Track Sync Unit*.   If *Sync Unit* was *Bar* it had to both start and end on a bar.  But what was less convenient, is if *Track Sync Unit* was *Loop* you could create a loop that was the same size as another but you would have to wait for that loop to play *all the way to the end* before you could start recording.
+In prior releases, when a recording started and how long it lasted had to be the same thing, either a *Sync Unit* or a *Track Sync Unit*.   If *Sync Unit* was *Bar* it had to both start and end on a bar.  But what was less convenient was if *Track Sync Unit* was *Loop* you could create a loop that was the same size as another but you would have to wait for the leader loop to play *all the way to the end* before you could start recording.
 
 A major new feature in build 46 is that when a recording starts and how long it is are independent things.  You can record a full loop length from another track, but you can start anywhere you want.
 
@@ -134,30 +145,25 @@ You might be wondering, if we can go back in time and pretend Record was pressed
 
 To get padded recording, set the *Late Start Adjustment* parameter to *Start Pad*.
 
+#### Fallbacks
 
+When you choose a recording unit, or quantization point that is defined by a leader track, there is a problem when no leader currently exists.  This is always the case when you are starting fresh and recording the very first loop.  Once that recording finishes, the track will become the leader, but until that time there is no leader.
 
+It is common to want to track to be able to synchronize in two different ways.  If there is a leader track, use it, but if there is no leader, synchronize with something else (or don't synchronize at all).
 
+In the past, this has been accomplished with scripts.  Now, for any parameter that allows the selection of a *Leader* value there will be another parameter with *Fallback* in the name where you may select a different value wheen there is no leader.
 
+One common example is wanting to use the Host to sync record the first loop using *Bar* units.  Then once that loop exists, start using it as the leader and record other tracks using *Leader Cycle* units.
 
+The recording parameters that have fallback are:
 
+```
+  Record Start
+  Record Start Fallback
 
+  Record Unit
+  Record Unit Fallback
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  Auto Record Units
+  Auto Record Units Fallback
+```
